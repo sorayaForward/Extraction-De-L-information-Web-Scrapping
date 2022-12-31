@@ -3,7 +3,7 @@ import sys
 #from [module] import [function or value]
 
 
-# 2nd Step : extraction des posologieaments le resultat sera dans posologie.json
+# extraction des posologies apartit de concord.html le resultat sera dans posologie.json
 
 
 class PosologieSpider(scrapy.Spider):
@@ -15,13 +15,4 @@ class PosologieSpider(scrapy.Spider):
         pos = []
         columns = response.xpath('//a/text()').getall()
         yield { "posologie" : columns
-         } 
-
-        
-                
-
-
-	        
-                
-        
-      
+         }
